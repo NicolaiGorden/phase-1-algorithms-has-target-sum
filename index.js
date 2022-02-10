@@ -1,6 +1,19 @@
-function hasTargetSum(array, target) {
-  // Write your algorithm here
-}
+function hasTargetSum (array, targetSum) {
+  for (let i = 0; i < array.length; i++) {
+    let firstNum = array[i]
+    for (let j = 0; j < array.length; j++) {
+      if (i !== j) {
+      //prevents numbers from adding to themselves
+        if (firstNum+array[j] === targetSum) {
+          return true;
+          break;
+        };
+      };
+    };
+  };
+  return false;
+};
+
 
 /* 
   Write the Big O time complexity of your function here
